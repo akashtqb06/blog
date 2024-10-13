@@ -36,7 +36,7 @@ export default function Page(): JSX.Element {
         <BannerTag
           iBannerTag={{
             bannerText: "example/turborepo architecture/",
-            codeText: "stunning-broccoli-site",
+            codeText: "stunning-broccoli-blog",
           }}
         />
       </div>
