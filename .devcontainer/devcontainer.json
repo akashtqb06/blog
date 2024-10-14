@@ -3,8 +3,7 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "blogApp",
   "workspaceFolder": "/workspace",
-  "postCreateCommand": "npm install && npm run dev",  // Install dependencies and run the app
-  "customizations": {
+"postStartCommand": "echo 'Container started. You can run your commands now.' && /bin/sh",  "customizations": {
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"
@@ -18,5 +17,4 @@
   "mounts": [
     "source=stunning-braccoli-volume-blog,target=/workspace,type=volume"
   ],
-  "remoteUser": "node"  // Use the 'node' user for running commands
 }

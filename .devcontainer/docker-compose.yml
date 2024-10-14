@@ -10,9 +10,5 @@ services:
     ports:
       - "3000:3000"  # Maps port 3000
       - "3001:3001"  # Maps port 3001
-    command: >
-      sh -c "
-        npm install && npm run dev # Install dependencies and start the dev server
-      "
 volumes:
   stunning-braccoli-volume-blog:  # Defines the volume

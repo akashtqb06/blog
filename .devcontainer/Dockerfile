@@ -25,5 +25,5 @@ WORKDIR /workspace
 # Install npm dependencies for the app
 RUN npm install
 
-# Run the development server
-CMD ["npm", "run", "dev"]
+# Use a shell to keep the container running
+CMD ["sh", "-c", "while :; do sleep 1; done"]
