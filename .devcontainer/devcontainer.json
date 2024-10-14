@@ -1,0 +1,22 @@
+{
+  "name": "TurboRepo Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "blogApp",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "npm install && npm run dev",  // Install dependencies and run the app
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "mounts": [
+    "source=stunning-braccoli-volume-blog,target=/workspace,type=volume"
+  ],
+  "remoteUser": "node"  // Use the 'node' user for running commands
+}

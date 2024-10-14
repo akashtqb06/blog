@@ -1,0 +1,18 @@
+services:
+  blogApp:
+    build:
+      context: ..  # Specifies the build context (parent directory)
+      dockerfile: .devcontainer/Dockerfile  # Path to the Dockerfile in the .devcontainer directory
+    container_name: stunning-braccoli-blog
+    image: stunning-braccoli-blog
+    volumes:
+      - stunning-braccoli-volume-blog:/workspace  # Mounts the volume to /workspace
+    ports:
+      - "3000:3000"  # Maps port 3000
+      - "3001:3001"  # Maps port 3001
+    command: >
+      sh -c "
+        npm install && npm run dev # Install dependencies and start the dev server
+      "
+volumes:
+  stunning-braccoli-volume-blog:  # Defines the volume
