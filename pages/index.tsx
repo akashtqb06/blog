@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Card } from "@repo/ui/card";
-import { BannerTag } from "@repo/ui/bannerTag";
+import { Card } from "@repo/ui";
 import styles from "./pageStyles/page.module.css"; // Importing the CSS module
 
 function Gradient({
@@ -33,12 +32,12 @@ export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
       <div className={styles.banner}>
-        <BannerTag
+        {/* <BannerTag
           iBannerTag={{
             bannerText: "example/turborepo architecture/",
             codeText: "stunning-broccoli-blog",
           }}
-        />
+        /> */}
       </div>
 
       <div className={styles.centerContainer}>
@@ -64,9 +63,12 @@ export default function Page(): JSX.Element {
 
       <div className={styles.gridTemplate}>
         {LINKS.map(({ title, href, description }) => (
-          <Card href={href} key={title} title={title}>
-            {description}
-          </Card>
+           <Card
+           title={title}
+           href={href}
+         >
+           {description}
+         </Card>
         ))}
       </div>
     </main>

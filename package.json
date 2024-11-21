@@ -13,8 +13,7 @@
     "react-dom": "^18",
     "next": "14.2.15",
     "@repo/ui": "*",
-    "@repo/utils":"*"
-    
+    "@repo/utils":"*"    
   },
   "devDependencies": {
     "typescript": "^5",
