@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card } from "@repo/ui";
+import { Card } from "@repo/ui/components/uiCreated/card";
 import styles from "./pageStyles/page.module.css"; // Importing the CSS module
 
 function Gradient({
@@ -51,7 +51,7 @@ export default function Page(): JSX.Element {
             </div>
 
             <div className={styles.logo}>
-              <Image alt="" height={120} priority src="lmnas2.svg" width={120} />
+              <Image alt="" height={120} priority src="logo.svg" width={120} />
             </div>
           </div>
           <Gradient className={styles.largeGradient} conic />
